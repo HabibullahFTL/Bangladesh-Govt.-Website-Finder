@@ -59,6 +59,10 @@ function selectDistrict(){
     dis.style.display = 'block';
     upazila.style.display = 'none';
     union.style.display = 'none';
+    
+    showDistWeb.innerHTML = '';
+    showUpzWeb.innerHTML = '';
+    showUniWeb.innerHTML = '';
 
     // Showing Divisions
     if (selectDivi.value != "") {
@@ -91,6 +95,10 @@ function selectUpazila(){
     dis.style.display = 'block';
     upazila.style.display = 'block';
     union.style.display = 'none';
+
+    showUpzWeb.innerHTML = '';
+    showUniWeb.innerHTML = '';
+
     // Showing Divisions
     if (selectDist.value != "") {
         UI.showWeb('District','bd_geo/districts.json',selectDist.value,"showDistWeb");
@@ -120,6 +128,9 @@ function selectUnion(){
     dis.style.display = 'block';
     upazila.style.display = 'block';
     union.style.display = 'Block';
+
+    showUniWeb.innerHTML = '';
+    
     // Showing Divisions
     if (selectUpz.value != "") {
         UI.showWeb('Upazila','bd_geo/upazilas.json',selectUpz.value,"showUpzWeb");
